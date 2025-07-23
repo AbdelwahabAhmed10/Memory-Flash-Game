@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+  background: linear-gradient(135deg, #fcecd8, #fff5e6);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #d35400;
+  margin-bottom: 30px;
+}
+
+.flash-box {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff0db;
+  border-radius: 16px;
+  box-shadow: inset 0 0 12px rgba(255, 170, 102, 0.3);
+  transition: all 0.3s ease;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 17px;
+  border: 2px solid #ffd7b5;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #d35400;
+  box-shadow: 0 0 0 4px rgba(211, 84, 0, 0.1);
+}
+
+button {
+  padding: 12px 26px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #d35400;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  margin: 10px 8px 0 8px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(211, 84, 0, 0.2);
+}
+
+button:hover {
+  background-color: #b84300;
+  transform: translateY(-2px);
+}
+.none {
+  display: none;
+}
+.result-msg,
+.timer-msg {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 16px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: fit-content;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.result-msg {
+  background-color: #fffdf8;
+  color: #333;
+  font-weight: 400;
+  border: 2px dashed #d35400;
+}
+
+.timer-msg {
+  background-color: #fcebd8;
+  color: #d35400;
+  font-weight: 400;
+  border: 2px solid #f7c08a;
+}
+.result-msg.updated {
+  animation: fade-pop 0.4s ease-in-out;
+}
+
+@keyframes fade-pop {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
